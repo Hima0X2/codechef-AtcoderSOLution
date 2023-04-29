@@ -1,0 +1,50 @@
+/// BISMILLAHIR RAHMANIR RAHIM
+#include<bits/stdc++.h>
+using namespace std;
+#define endl '\n'
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define fraction() cout.unsetf(ios::floatfield); cout.precision(10); cout.setf(ios::fixed,ios::floatfield);
+long long int lcm(long long int a,long long b)
+{
+    return a*(b/__gcd(a,b));
+}
+const long long int mx = 1e7+123;
+long long int a[mx];
+
+int main()
+{
+    optimize();
+    // freopen("a.txt","r",stdin);freopen("b.txt","w",stdout);
+    int t,i,n,y;
+    string a,b;
+    bool ok=false;
+    cin>>a>>b;
+    reverse(a.begin(),a.end());
+    while(a.size()<b.size())
+    {
+        a=a+"0";
+    }
+    while(a.size()>b.size())
+    {
+        b=b+"0";
+    }
+    for(i=0; i<a.size(); i++)
+    {
+        int x=(a[i]-'0')+(b[i]-'0');
+        if(x>=10)
+        {
+            ok=true;
+            break;
+        }
+    }
+    if(ok)
+    {
+        cout<<"Yes\n";
+    }
+    else
+    {
+        cout<<"No\n";
+    }
+//std::cout << std::fixed << std::setprecision(2);
+}
+/// ALHAMDULILLAH
